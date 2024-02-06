@@ -1,0 +1,42 @@
+<main>
+  <section id="portfolio" class="container py-3">
+    <div class="title">
+      <h1 class="text-uppercase fw-bold pt-3 pb-2 m-0 text-center fs-2">
+        PORTFOLIO COMPONENT
+      </h1>
+      <div
+        class="line d-flex justify-content-center align-items-center text-center flex-direction-column py-2"
+      >
+        <div class="lineLeft me-3"></div>
+        <div class="star"><i class="fa-solid fa-star"></i></div>
+        <div class="lineRight ms-3"></div>
+      </div>
+    </div>
+    <div>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let data of galleryData; let i = index">
+          <lightgallery [settings]="settings">
+            <figure
+              class="position-relative rounded-3 overflow-hidden"
+              id="lightgallery"
+            >
+              <a [href]="data.imageSrc" data-lg-size="1600-2400">
+                <img
+                  [src]="data.imageSrc"
+                  [alt]="data.imageAlt"
+                  class="w-100 rounded-3"
+                />
+              </a>
+
+              <div
+                class="layer position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center rounded-3"
+              >
+                <i class="text-white fa-solid fa-plus fa-6x"></i>
+              </div>
+            </figure>
+          </lightgallery>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

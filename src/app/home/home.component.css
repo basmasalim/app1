@@ -1,0 +1,17 @@
+#home {
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-block: 80px;
+}
+
+figure img {
+  width: 220px;
+}
+
+figure .lineLeft,
+figure .lineRight {
+  width: 80px;
+  height: 3px;
+  background-color: #fff;
+}

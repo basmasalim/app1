@@ -1,0 +1,11 @@
+main {
+  background-color: #1abc9c;
+  color: #fff;
+  height: 85vh;
+}
+.title .lineLeft,
+.title .lineRight {
+  width: 80px;
+  height: 3px;
+  background-color: #fff;
+}

@@ -1,0 +1,55 @@
+<nav
+  class="navbar navbar-expand-lg position-fixed top-0 w-100 z-3"
+  [ngClass]="{
+    'navbar-fixed': isNavbarFixed,
+    'navbar-scrolled': isNavbarFixed
+  }"
+>
+  <div class="container">
+    <a class="navbar-brand text-uppercase text-white fw-bold fs-3" routerLink=""
+      >start framework</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto py-1">
+        <li class="nav-item mx-2">
+          <a
+            class="nav-link active text-uppercase text-white fw-bold"
+            aria-current="page"
+            routerLinkActive="active-link"
+            routerLink="about"
+            >about</a
+          >
+        </li>
+        <li class="nav-item px-2">
+          <a
+            class="nav-link text-uppercase text-white fw-bold"
+            aria-current="page"
+            routerLinkActive="active-link"
+            routerLink="portfolio"
+            >portfolio</a
+          >
+        </li>
+        <li class="nav-item px-2">
+          <a
+            class="nav-link text-uppercase text-white fw-bold"
+            aria-current="page"
+            routerLinkActive="active-link"
+            routerLink="contact"
+            >contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

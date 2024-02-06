@@ -1,0 +1,101 @@
+<main class="py-4">
+  <section id="contact" class="container">
+    <div class="title mb-5">
+      <h1 class="text-uppercase fw-bolder py-2 m-0 text-center">
+        CONTACT SECTION
+      </h1>
+      <div
+        class="line d-flex justify-content-center align-items-center text-center flex-direction-column"
+      >
+        <div class="lineLeft me-3"></div>
+        <div class="star"><i class="fa-solid fa-star"></i></div>
+        <div class="lineRight ms-3"></div>
+      </div>
+    </div>
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="mx-auto w-50">
+      <!-- Username Field -->
+      <div class="form-group my-3">
+        <label
+          *ngIf="userNameInput.dirty && userName !== ''"
+          for="userName"
+          class="ms-2"
+          >userName :</label
+        >
+        <input
+          type="text"
+          name="userName"
+          id="userName"
+          placeholder="userName"
+          class="form-control border-0 border-bottom py-3 shadow-none"
+          [(ngModel)]="userName"
+          required
+          #userNameInput="ngModel"
+        />
+      </div>
+
+      <!-- User Age Field -->
+      <div class="form-group my-3">
+        <label
+          *ngIf="userAgeInput.dirty && userAge !== null"
+          for="userAge"
+          class="ms-2"
+          >userAge :</label
+        >
+        <input
+          type="number"
+          name="userAge"
+          id="userAge"
+          placeholder="userAge"
+          class="form-control border-0 border-bottom py-3 shadow-none"
+          [(ngModel)]="userAge"
+          required
+          #userAgeInput="ngModel"
+        />
+      </div>
+
+      <!-- User Email Field -->
+      <div class="form-group my-3">
+        <label
+          *ngIf="userEmailInput.dirty && userEmail !== ''"
+          for="userEmail"
+          class="ms-2"
+          >userEmail :</label
+        >
+        <input
+          type="email"
+          name="userEmail"
+          id="userEmail"
+          placeholder="userEmail"
+          class="form-control border-0 border-bottom py-3 shadow-none"
+          [(ngModel)]="userEmail"
+          required
+          #userEmailInput="ngModel"
+        />
+      </div>
+
+      <!-- User Password Field -->
+      <div class="form-group my-3">
+        <label
+          *ngIf="userPasswordInput.dirty && userPassword !== ''"
+          for="userPassword"
+          class="ms-2"
+          >userPassword :</label
+        >
+        <input
+          type="password"
+          name="userPassword"
+          id="userPassword"
+          placeholder="userPassword"
+          class="form-control border-0 border-bottom py-3 shadow-none"
+          [(ngModel)]="userPassword"
+          required
+          #userPasswordInput="ngModel"
+        />
+      </div>
+
+      <button type="submit" class="submit text-white rounded-3 my-3">
+        Send Message
+      </button>
+    </form>
+  </section>
+</main>

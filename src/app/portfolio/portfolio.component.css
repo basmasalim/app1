@@ -1,0 +1,26 @@
+@import "lightgallery/css/lightgallery.css";
+@import "lightgallery/css/lg-zoom.css";
+@import "lightgallery/css/lg-video.css";
+@import "lightgallery/css/lg-share.css";
+@import "lightgallery/css/lg-rotate.css";
+@import "lightgallery/css/lg-thumbnail.css";
+
+#portfolio {
+  color: #2c3e50;
+  margin-block: 80px;
+}
+.lineLeft,
+.lineRight {
+  width: 80px;
+  height: 3px;
+  background-color: #2c3e50;
+}
+.layer {
+  background-color: #29b197;
+  opacity: 0;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+figure:hover .layer {
+  opacity: 1;
+}
