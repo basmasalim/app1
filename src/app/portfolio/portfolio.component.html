@@ -13,29 +13,30 @@
       </div>
     </div>
     <div>
-      <div class="row">
-        <div class="col-md-4" *ngFor="let data of galleryData; let i = index">
-          <lightgallery [settings]="settings">
-            <figure
-              class="position-relative rounded-3 overflow-hidden"
-              id="lightgallery"
+      <div class="row gy-3">
+        <figure id="lightgallery">
+          <lightgallery [settings]="settings" class="row gy-3">
+            <a
+              [href]="data.imageSrc"
+              *ngFor="let data of galleryData; let i = index"
+              class="col-md-4"
             >
-              <a [href]="data.imageSrc" data-lg-size="1600-2400">
+              <div class="position-relative rounded-3 overflow-hidden">
                 <img
-                  [src]="data.imageSrc"
                   [alt]="data.imageAlt"
+                  [src]="data.imageSrc"
                   class="w-100 rounded-3"
                 />
-              </a>
-
-              <div
-                class="layer position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center rounded-3"
-              >
-                <i class="text-white fa-solid fa-plus fa-6x"></i>
+                <!-- Overlay Layer -->
+                <div
+                  class="layer position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center rounded-3"
+                >
+                  <i class="text-white fa-solid fa-plus fa-6x"></i>
+                </div>
               </div>
-            </figure>
+            </a>
           </lightgallery>
-        </div>
+        </figure>
       </div>
     </div>
   </section>
